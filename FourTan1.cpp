@@ -666,25 +666,37 @@ int main()
 //}
 
 
-//二十六   大写字符转换成小写字符
-#include<stdio.h>
+////二十六   大写字符转换成小写字符
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	char Big;
+//	char ssmall;
+//	puts("Please enter capital character:");
+//	scanf_s("%c", &Big);//Big = getchar();
+//	puts("Minuscule character is:");
+//	ssmall = Big + 32;            //小写转大写，即（-32）；
+//	printf("%c\n", ssmall);
+//	printf("ASCII=%d\n", Big);
+//	system("pause");
+//	return 0;
+//}
+
+
+
+//二十七   工资计算器
 #include<Windows.h>
+#include<stdio.h>
+#define   Base 5000
 int main() {
-	char Big;
-	char ssmall;
-	puts("Please enter capital character:");
-	scanf_s("%c", &Big);//Big = getchar();
-	puts("Minuscule character is:");
-	ssmall = Big + 32;            //小写转大写，即（-32）；
-	printf("%c\n", ssmall);
-	printf("ASCII=%d\n", Big);
+	float num1, wage;
+	puts("请输入一个月内你的商品数量：\n");
+	scanf_s("%f", &num1);
+	wage = Base + num1 * 1.5;
+	printf("Your wage=%.2f\n", wage);
 	system("pause");
 	return 0;
 }
-
-
-
-
 
 
 
