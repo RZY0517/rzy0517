@@ -696,7 +696,7 @@ int main() {
 	printf("Your wage=%.2f\n", wage);
 	system("pause");
 	return 0;
-}
+}   //test01
 
 
 
