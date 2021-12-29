@@ -684,40 +684,165 @@ int main()
 
 
 
-//二十七   工资计算器
-#include<Windows.h>
+////二十七   工资计算器
+//#include<Windows.h>
+//#include<stdio.h>
+//#define   Base 5000
+//int main() {
+//	float num1, wage;
+//	puts("请输入一个月内你的商品数量：\n");
+//	scanf_s("%f", &num1);
+//	wage = Base + num1 * 1.5;
+//	printf("Your wage=%.2f\n", wage);
+//	system("pause");
+//	return 0;
+//}   //test01
+
+
+
+//二十八   if else
+
+//#include<Windows.h>
+//#include<stdio.h>
+//int main() {
+//	int Signal;
+//	printf("the Red Light is 0,the Green Light is 1,the Yellow Light is other number\n");
+//	scanf_s("%d", &Signal);
+//	if (Signal == 0)
+//	{
+//		printf("the Light is Red,car can't run\n");
+//	}
+//	else if (Signal == 1)
+//	{
+//		printf("the Light is Green,car can run\n");
+//	}
+//	else {
+//		printf("the Light is Yellow,car can wait!\n");
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+
+
+//二十九   if的嵌套
+
+//#include<Windows.h>
+//#include<stdio.h>
+//int main() {
+//	int Day = 0;
+//	int Mon = 1, Tue = 2, Wed = 3, Thu = 4, Fir = 5, Sat = 6, Sun = 7;
+//	printf("enter a day of week to get course:\n");
+//	scanf_s("%d", &Day);
+//	if (Day > Fir)
+//	{
+//		if (Day == Sat) {
+//			printf("Go shopping with friends\n");
+//		}
+//		else
+//		{
+//			printf("At home with families\n");
+//		}
+//	}
+//	else
+//	{
+//		if (Day == Mon)
+//		{
+//			printf("Have a meeting in the company\n");
+//		}
+//		else
+//		{
+//			printf("Working with partner\n");
+//		}
+//	}
+//
+//	system("pause");
+//	return 0;
+//}
+
+
+//三十  使用条件运算符，计算欠款金额
+
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	float Dues;
+//	float Amount;
+//	int Ontime;
+//	char ss=0;
+//	printf("Enter dues amount\n");
+//	scanf_s(" %f", &Dues);
+//	
+//	printf("On Time?(y/n)\n");
+//	//getchar();
+//	//ss = getchar();
+//	scanf_s("%c", &ss);
+//	Ontime = (ss == 'y') ? 1 : 0;
+//	Amount = Ontime ? Dues : (Dues*1.1);
+//	printf("the Amount is:%.2f\n", Amount);
+//	system("pause");
+//	return 0;
+//}
+/*
+原因是这样的:在C语言中，如果使用字符型变量（就是char型）时在有连续输入的情况下，很容易因为出现
+垃圾字符而导致程序的流程非法。也就是c2存储了c1中没有存储的一个回车符号.c1没有接受回车符,这个符号
+存储在输入缓存中,当执行到第二个scanf的时候这个回车符就赋给了c2.所有程序没有提示你输入字符.
+方法：
+1、在scanf的%c之前加一个空格
+2、在scanf语句之前加getchar（）；
+在第一个scanf 后添加下面的语句fflush (stdin);
+*/
+//原文链接：https ://blog.csdn.net/beiguodexueCSDN/article/details/109655869
+
+
+//三十一  使用switch语句
+
 #include<stdio.h>
-#define   Base 5000
+#include<Windows.h>
 int main() {
-	float num1, wage;
-	puts("请输入一个月内你的商品数量：\n");
-	scanf_s("%f", &num1);
-	wage = Base + num1 * 1.5;
-	printf("Your wage=%.2f\n", wage);
+	char grade;
+	int g;
+	printf("Please enter your grade:\n");
+	//scanf_s("%c", &grade);
+	scanf_s("%d", &g);
+	printf("Your grade is about：");
+	if (g >= 90 && g <= 100)
+	{
+		printf("Your grade is about A\n");
+	}
+	else if (g >= 80 && g < 90)
+	{
+		printf("Your grade is about B\n");
+	}
+	else if (g >= 70 && g < 80)
+	{
+		printf("Your grade is about C\n");
+	}
+	else if (g >= 60 && g < 70)
+	{
+		printf("Your grade is about D\n");
+	}
+	else 
+	{
+		printf("Your grade is about E\n");
+	}
+	/*switch (grade)
+	{
+	case 'A':
+		printf("90~100\n"); break;
+	case 'B':
+		printf("80~89\n"); break;
+	case 'C':
+		printf("70~79\n"); break;
+	case 'D':
+		printf("60~69\n"); break;
+	case 'E':
+		printf("<60\n"); break;
+	}*/
+
 	system("pause");
 	return 0;
-}   //test01
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
