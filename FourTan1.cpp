@@ -797,61 +797,159 @@ int main()
 
 //三十一  使用switch语句
 
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	char grade;
+//	int g;
+//	printf("Please enter your grade:\n");
+//	//scanf_s("%c", &grade);
+//	scanf_s("%d", &g);
+//	printf("Your grade is about：");
+//	if (g >= 90 && g <= 100)
+//	{
+//		printf("Your grade is about A\n");
+//	}
+//	else if (g >= 80 && g < 90)
+//	{
+//		printf("Your grade is about B\n");
+//	}
+//	else if (g >= 70 && g < 80)
+//	{
+//		printf("Your grade is about C\n");
+//	}
+//	else if (g >= 60 && g < 70)
+//	{
+//		printf("Your grade is about D\n");
+//	}
+//	else 
+//	{
+//		printf("Your grade is about E\n");
+//	}
+//	/*switch (grade)
+//	{
+//	case 'A':
+//		printf("90~100\n"); break;
+//	case 'B':
+//		printf("80~89\n"); break;
+//	case 'C':
+//		printf("70~79\n"); break;
+//	case 'D':
+//		printf("60~69\n"); break;
+//	case 'E':
+//		printf("<60\n"); break;
+//	default:
+//		printf("You enter the char is wrong!\n");
+//		break;
+//	}*/
+//
+//	system("pause");
+//	return 0;
+//}
+
+
+//三十二    if...else与switch的综合应用
+
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int Month = 0, Day = 0;
+//	printf("enter the month you want to know the day\n");
+//	scanf_s("%d", &Month);
+//	switch (Month) {
+//		//多路开关模式switch语句进行检验
+//	case 1:
+//	case 3:
+//	case 5:
+//	case 7:
+//	case 8:
+//	case 10:
+//	case 12:
+//		Day = 31; break;
+//	case 2:
+//		Day = 28; break;
+//	case 6:
+//	case 4:
+//	case 9:
+//	case 11:
+//		Day = 30; break;
+//	default:
+//		Day = -1;
+//		break;
+//	}
+//	if (Day == -1)
+//		printf("there is a error with you enter\n");
+//	else
+//		printf("2021年%d月有%d天\n", Month, Day);
+//
+//	system("pause");
+//	return 0;
+//}
+
+
+//三十三  条件表达式（附加条件，利用选择结构写出函数），当输入x值时，输出y值。
+//y=x,(x<1);   y=2x-1(1<=x<10);   y=3x-11(x>=10)
+
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int x = 0;
+//	int y = 0;
+//	printf("enter your x\n");
+//	scanf_s("%d", &x);
+//	if (x < 1) {
+//		y = x;
+//		
+//	}
+//	else if (x >= 1 && x < 10)
+//	{
+//		y = 2*x - 1;
+//		
+//	}
+//	else
+//	{
+//		y = 3*x - 11;
+//		
+//	}
+//	printf("y=%d\n",y);
+//	system("pause");
+//	return 0;
+//}
+
+
+//比较3个数中，最大的那个数
+
 #include<stdio.h>
 #include<Windows.h>
 int main() {
-	char grade;
-	int g;
-	printf("Please enter your grade:\n");
-	//scanf_s("%c", &grade);
-	scanf_s("%d", &g);
-	printf("Your grade is about：");
-	if (g >= 90 && g <= 100)
+	int temp = 0, a, b, c;
+	printf("Please enter three numbers\n");
+	scanf_s("%d", &a);
+	scanf_s("%d", &b);
+	scanf_s("%d", &c);
+	printf("你输入的3个数分别是：%2d %2d %2d\n", a, b, c);
+	if (a < b)
 	{
-		printf("Your grade is about A\n");
+		temp = a;
+		a = b;
+		b = temp;
 	}
-	else if (g >= 80 && g < 90)
+	if (a < c)
 	{
-		printf("Your grade is about B\n");
+		temp = a;
+		a = c;
+		c = temp;
 	}
-	else if (g >= 70 && g < 80)
+	if (b < c)
 	{
-		printf("Your grade is about C\n");
+		temp = b;
+		b = c;
+		c = temp;
 	}
-	else if (g >= 60 && g < 70)
-	{
-		printf("Your grade is about D\n");
-	}
-	else 
-	{
-		printf("Your grade is about E\n");
-	}
-	/*switch (grade)
-	{
-	case 'A':
-		printf("90~100\n"); break;
-	case 'B':
-		printf("80~89\n"); break;
-	case 'C':
-		printf("70~79\n"); break;
-	case 'D':
-		printf("60~69\n"); break;
-	case 'E':
-		printf("<60\n"); break;
-	}*/
-
+	printf("他们从大到小排序为：%d %d %d\n",a,b,c);
 	system("pause");
 	return 0;
 }
-
-
-
-
-
-
-
-
-
 
 
 
