@@ -1118,7 +1118,7 @@ int main()
 //}
 
 
-//三十八   打印三角形
+//三十八   打印三角形※
 //#include<stdio.h>
 //#include<Windows.h>
 //int main() {
@@ -1144,34 +1144,124 @@ int main()
 
 //三十八  打印乘法口诀
 
-#include<stdio.h>
-#include<Windows.h>
-int main() {
-	int row, col;
-	for (row = 1; row <= 6; row++)
-	{
-		for (col = 1; col <= row; col++)
-		{
-			printf("%2d*%d=%2d ", row, col, row*col);
-		}
-		printf("\n");
-	}
-	system("pause");
-	return 0;
-}
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int row, col;
+//	for (row = 1; row <= 6; row++)
+//	{
+//		for (col = 1; col <= row; col++)
+//		{
+//			printf("%2d*%d=%2d ", row, col, row*col);
+//		}
+//		printf("\n");
+//	}
+//	system("pause");
+//	return 0;
+//}
 
 
+//三十九   goto语句
+
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	goto Show;
+//	printf("456\n");
+//Show:
+//	printf("123\n");
+//
+//	system("pause");
+//	return 0;
+//}
+
+//四十   goto在循环内使用
+
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int step, select;
+//	for (step = 1; step < 10; step++)
+//	{
+//		printf("The Step is:%d\n", step);
+//		do {
+//			printf("enter a number to select\n");
+//			printf("0 is quit,99 for the next step\n");
+//			scanf_s("%d", &select);
+//			if (select == 0)
+//			{
+//				goto exit;
+//			}
+//		} while (select != 99);
+//	}
+//exit:
+//	printf("Exit the program!\n");
+//
+//	system("pause");
+//	return 0;
+//}
 
 
+//四十一   break和continue的用法
+
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int count;
+//	for (count = 0; count < 10; count++)
+//	{
+//		if (count == 5) {
+//			//printf("Continue here\n");
+//			//continue;
+//			/*printf("Break here\n");
+//			break;*/
+//		}
+//		printf("the counter is:%d\n", count);
+//	}
+//	system("pause");
+//	return 0;
+//}
 
 
+//四十二   for循环打印出大写字母的ASCII码对照表
+
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int i = 0;
+//	int Char='A';
+//
+//	//printf("%d\n", Char);
+//	for (i = 0; i <= 25; i++)
+//	{
+//		printf("%c is:%d\n", Char,Char);
+//		Char++;
+//	}
+//	system("pause");
+//	return 0;
+//
+//}
 
 
+//四十三   for打印出0~100内不能被3整除的数
 
-
-
-
-
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int num = 1;
+//	int i;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		if (i % 3 == 0)
+//		{
+//			continue;
+//		}
+//		printf("%d\n", i);
+//	}
+//	system("pause");
+//	return 0;
+//
+//}
 
 
 
