@@ -917,67 +917,248 @@ int main()
 //}
 
 
-//比较3个数中，最大的那个数
+//三十四  比较3个数中，最大的那个数
+
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int temp = 0, a, b, c;
+//	printf("Please enter three numbers\n");
+//	scanf_s("%d", &a);
+//	scanf_s("%d", &b);
+//	scanf_s("%d", &c);
+//	printf("你输入的3个数分别是：%2d %2d %2d\n", a, b, c);
+//	if (a < b)
+//	{
+//		temp = a;
+//		a = b;
+//		b = temp;
+//	}
+//	if (a < c)
+//	{
+//		temp = a;
+//		a = c;
+//		c = temp;
+//	}
+//	if (b < c)
+//	{
+//		temp = b;
+//		b = c;
+//		c = temp;
+//	}
+//	printf("他们从大到小排序为：%d %d %d\n",a,b,c);
+//	system("pause");
+//	return 0;
+//}
+
+
+
+//三十五   累计1到100的总和
+//F1:
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int sum=0;
+//	int i;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		sum += i;
+//	}
+//	printf("sum=%d\n", sum);
+//
+//	system("pause");
+//	return 0;
+//}
+
+
+//F2:
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int sum = 0;
+//	int num = 1;
+//	while (num <= 100)
+//	{
+//		sum += num;
+//		num++;
+//	}
+//	printf("sum=%d\n", sum);
+//	system("pause");
+//	return 0;
+//}
+
+//F3:
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int num = 1;
+//	int sum = 0;
+//	do {
+//		sum += num;
+//		num++;
+//	} while (num <= 100);
+//	printf("sum=%d\n", sum);
+//	system("pause");
+//	return 0;
+//}
+
+
+
+//三十六   for循环，产生10个随机数    ※
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<Windows.h>
+//#include <time.h>
+//int main() {
+//	int counter,i;
+//	puts("每输入一次回车，将获得一个新的随机数（回车间隔时间要 >1s）\n");
+//	for (i = 0; i < 10; i++)
+//	{
+//		srand((unsigned)time(NULL));/* 初始化随机数发生器   void srand(unsigned seed);*/
+//		counter = rand()%50;//%50是0~50以内的随机数，% 51 + 13;产生13~63的随机数
+////分析：取模即取余，rand()%51+13我们可以看成两部分：rand()%51是产生 0~50 的随机数，后面+13保证 a 
+////最小只能是 13，最大就是 50+13=63
+
+//		//因为，for 循环运行速度非常快，在一秒之内就运行完成了，而 time() 函数得到的时间只能
+//		//精确到秒，所以每次循环得到的时间都是一样的，这样一来，种子也就是一样的，随机数也就一样了。
+//		
+//		printf("Random number %d is : %d\n", i,counter);
+//		getchar();//因这时还未学会使用时间控制函数，则先使用getchar（），来手动控制时间。
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include<Windows.h>
+//#include <stdlib.h>
+//int main() {
+//	int a = rand();
+//	printf("%d\n", a);
+//	system("pause");
+//	return 0;
+//}
+
+//仅供参考
+//#include <stdio.h>      /* printf */
+//#include <time.h>       /* time_t, struct tm, difftime, time, mktime */
+//#include<Windows.h>
+//int main()
+//{
+//	time_t timer;
+//	struct tm y2k = { 0 };
+//	double seconds;
+//
+//	y2k.tm_hour = 0;   y2k.tm_min = 0; y2k.tm_sec = 0;
+//	y2k.tm_year = 100; y2k.tm_mon = 0; y2k.tm_mday = 1;
+//
+//	time(&timer);  /* get current time; same as: timer = time(NULL)  */
+//
+//	seconds = difftime(timer, mktime(&y2k));
+//
+//	printf("%.f seconds since January 1, 2000 in the current timezone", seconds);
+//	system("pause");
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int i, j, k;
+//	for (i = 1; i <= 5; i++)
+//	{
+//		for (j = 1; j <= 5 - i; j++)
+//			printf(" ");
+//		for (k = 1; k <= 2 * i - 1; k++)
+//			printf("*");
+//		printf("\n");
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+//三十七   HD  求数组下标
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int left = 0;
+//	int right = sizeof(arr) / sizeof(arr[0]) - 1;//  = 40/4-1 = 10-1 =9;
+//	printf("right=%d\n", right);
+//
+//	int key = 7;
+//	int mid = 0;
+//	while (left <= right)
+//	{
+//		printf("\nleft=%2d,,right=%2d\n", left, right);
+//		mid = (left + right) / 2;//=4
+//		printf("mid=%d\n", mid);
+//		if (arr[mid] > key)
+//		{
+//			right = mid - 1;
+//			printf("> right=%d  ", right);
+//		}
+//		else if (arr[mid] < key)
+//		{
+//			left = mid + 1;
+//			printf("< left=%d  ", left);
+//		}
+//		else
+//			break;
+//	}
+//	if (left <= right)
+//		printf("找到了,下标是%d，right=%d\n", mid, right);
+//	else
+//		printf("找不到\n");
+//
+//	system("pause");
+//	return 0;
+//}
+
+
+//三十八   打印三角形
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int i, j, k;
+//	for (i = 1; i <= 5; i++)
+//	{
+//		for (j = 1; j <= 5 - i; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (k = 1; k <= 2 * i - 1; k++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//
+//	}
+//
+//	system("pause");
+//	return 0;
+//}
+
+
+//三十八  打印乘法口诀
 
 #include<stdio.h>
 #include<Windows.h>
 int main() {
-	int temp = 0, a, b, c;
-	printf("Please enter three numbers\n");
-	scanf_s("%d", &a);
-	scanf_s("%d", &b);
-	scanf_s("%d", &c);
-	printf("你输入的3个数分别是：%2d %2d %2d\n", a, b, c);
-	if (a < b)
+	int row, col;
+	for (row = 1; row <= 6; row++)
 	{
-		temp = a;
-		a = b;
-		b = temp;
+		for (col = 1; col <= row; col++)
+		{
+			printf("%2d*%d=%2d ", row, col, row*col);
+		}
+		printf("\n");
 	}
-	if (a < c)
-	{
-		temp = a;
-		a = c;
-		c = temp;
-	}
-	if (b < c)
-	{
-		temp = b;
-		b = c;
-		c = temp;
-	}
-	printf("他们从大到小排序为：%d %d %d\n",a,b,c);
 	system("pause");
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
