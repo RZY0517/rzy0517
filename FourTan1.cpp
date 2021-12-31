@@ -1263,30 +1263,230 @@ int main()
 //
 //}
 
+//同三十八   打印三角形
+
+//#include<stdio.h>
+//#include<Windows.h>     //正三角形
+//#define row 5
+//int main() {
+//	int i, j, k;
+//	for (int i = 1; i <= row; i++) {           //控制输出多少行
+//		for (int j = 0; j < row - i; j++)      //控制这一行先输出几个空格
+//		{
+//		 printf("1");
+//		}
+//		for (int k = 0; k < 2 * i - 1; k++) //等待这一行空格输完以后，在控制输出几个*
+//		{
+//		  printf("*");	
+//		}
+//		 printf("\n");
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+//倒三角形
+//#include<stdio.h> 
+//#include<Windows.h>
+//#define row 5
+//int main()
+//{
+//	int i, j, k;
+//	for (i = 0; i < row; i++)
+//	{
+//		for (j = row; j > row - i; j--)
+//		{
+//			printf(" ");
+//		}
+//		for (k = 0; k < (2 * row - 1) - 2 * i; k++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+
+//#include<stdio.h>         
+//#include<Windows.h>                   //左靠正直角形
+//#define row 5
+//int main()
+//{
+//	int i, j, k;
+//	for (i = 1; i <= row; i++)
+//	{
+//		for (j = 1; j <= 2 * i - 1; j++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//
+//	system("pause");
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<Windows.h>              //右靠正直角形
+//#define row 5
+//int main()
+//{
+//	int i, j, k;
+//	for (i = 1; i <= row; i++)
+//	{
+//		for (j = 0; j <= (2 * row - 1) - 2 * i; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (k = 1; k <= 2 * i - 1; k++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+
+//#include<stdio.h>           //左靠倒直角 
+//#include<Windows.h> 
+//#define row 5
+//int main()
+//{
+//	int i, j, k;
+//	for (i = 0; i <= row; i++)
+//	{
+//		for (j = 0; j < (2 * row - 1) - 2 * i; j++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+//#include<stdio.h> 
+//#include<Windows.h>        //右靠倒直角 
+//#define row 5
+//int main()
+//{
+//	int i, j, k;
+//	for (i = 0; i < row; i++)
+//	{
+//		for (j = 0; j <= 2 * i - 1; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (k = 0; k < (2 * row - 1) - 2 * i; k++)
+//		{
+//			printf("*");
+//		}
+//
+//		printf("\n");
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+//#include<stdio.h> 
+//#include<Windows.h>        //右靠倒直角 
+//#define tmp 5
+//int main()
+//{
+//	int i, j, k;
+//	for (int i = 1; i <= tmp; i++) {
+//		for (int j = 0; j < i; j++) {
+//			printf("* ");
+//		}
+//		printf("\n");
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+
+//#include<stdio.h> 
+//#include<Windows.h>        //菱形雏形 
+//#define row1 9
+//#define row2 8
+//int main()
+//{
+//	int i, j, k;
+//	for (i = 1; i <= row1; i++)
+//	{
+//		for (j = 1; j <= row1 - i; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (k = 0; k < 2 * i - 1; k++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//
+//	for (i = 0; i < row2; i++)
+//	{
+//		for (j = 0; j <= i; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (k = 0; k < (2 * row2 - 1) - 2 * i; k++)
+//		{
+//			printf("*");
+//		}
+//
+//		printf("\n");
+//	}
+//
+//	system("pause");
+//	return 0;
+//}
 
 
 
+#include<stdio.h> 
+#include<Windows.h>        //菱形 
+int main()
+{
 
+	int i, j, k, n,ss;
+	printf("enter you printf row:(odd number)\n");
+	scanf_s("%d", &n);
+	ss = (n+1) / 2 ;
+	for (i = 1; i <= ss; i++)
+	{
+		for (j = 1; j <= ss - i; j++)
+		{
+			printf(" ");
+		}
+		for (k = 0; k < 2 * i - 1; k++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
 
+	for (i = 0; i < ss - 1; i++)
+	{
+		for (j = 0; j <= i; j++)
+		{
+			printf(" ");
+		}
+		for (k = 0; k < (2 * (ss - 1) - 1) - 2 * i; k++)
+		{
+			printf("*");
+		}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		printf("\n");
+	}
+	system("pause");
+	return 0;
+}
 
 
 
