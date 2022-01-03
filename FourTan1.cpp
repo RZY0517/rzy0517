@@ -224,7 +224,7 @@ int main()
 //十
 
 //#include<Windows.h>
-//#include<stdio.h>
+//#include<stdio.h>             
 //#include<math.h>
 //int main()
 //{
@@ -241,7 +241,7 @@ int main()
 //		}
 //	}
 //
-//	if (a = 0) 
+//	if (a == 0) 
 //	{
 //		printf("%d是素数。\n", num);
 //	}
@@ -249,6 +249,7 @@ int main()
 //	{
 //		printf("%d不是素数。\n",num);
 //	}
+//	system("pause");
 //	return 0;
 //}
 
@@ -1263,7 +1264,7 @@ int main()
 //
 //}
 
-//同三十八   打印三角形
+//同  三十八   打印三角形
 
 //#include<stdio.h>
 //#include<Windows.h>     //正三角形
@@ -1449,59 +1450,252 @@ int main()
 
 
 
-#include<stdio.h> 
-#include<Windows.h>        //菱形 
-int main()
-{
-
-	int i, j, k, n,ss;
-	printf("enter you printf row:(odd number)\n");
-	scanf_s("%d", &n);
-	ss = (n+1) / 2 ;
-	for (i = 1; i <= ss; i++)
-	{
-		for (j = 1; j <= ss - i; j++)
-		{
-			printf(" ");
-		}
-		for (k = 0; k < 2 * i - 1; k++)
-		{
-			printf("*");
-		}
-		printf("\n");
-	}
-
-	for (i = 0; i < ss - 1; i++)
-	{
-		for (j = 0; j <= i; j++)
-		{
-			printf(" ");
-		}
-		for (k = 0; k < (2 * (ss - 1) - 1) - 2 * i; k++)
-		{
-			printf("*");
-		}
-
-		printf("\n");
-	}
-	system("pause");
-	return 0;
-}
-
-
+//#include<stdio.h> 
+//#include<Windows.h>        //菱形 
+//int main()
+//{
+//
+//	int i, j, k, n,ss;
+//	printf("Enter you printf row:(odd number)\n");
+//	scanf_s("%d", &n);
+//	ss = (n+1) / 2 ;
+//	for (i = 1; i <= ss; i++)
+//	{
+//		for (j = 1; j <= ss - i; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (k = 0; k < 2 * i - 1; k++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//
+//	for (i = 0; i < ss - 1; i++)
+//	{
+//		for (j = 0; j <= i; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (k = 0; k < (2 * (ss - 1) - 1) - 2 * i; k++)
+//		{
+//			printf("*");
+//		}
+//
+//		printf("\n");
+//	}
+//	system("pause");
+//	return 0;
+//}
 
 
+//四十四    8.1数组   使用数组保存输入的数据，逆向输出输入的数据。
+
+//#include<stdio.h>
+//#include<Windows.h>
+//#define num 5               //自定义一维数组数组大小
+//int main() {
+//	
+//		int arr[num], index;
+//		printf("Please enter a Array:\n");
+//
+//		for (index = 0; index < num; index++) {
+//			scanf_s("%d", &arr[index]);
+//
+//		}
+//		printf("Original Arr is:\n");
+//		for (index = 0; index < 5; index++)
+//		{
+//			printf("%2d", arr[index]);
+//		}
+//		printf("\nNow arr is:\n");
+//		for (index = num-1; index >= 0; index--)
+//		{
+//			printf("%2d", arr[index]);
+//		}
+//
+//		system("pause");
+//		return 0;
+//}
 
 
+//四十五   初始化一维数组      隔位输出及赋值数组中部分元素
+
+//#include<stdio.h>
+//#include<Windows.h>
+//int main() {
+//	int index;
+//	int arr[] = {1,2,3,4,5 };
+//	for (index = 0; index < 5; index ++)
+//	{
+//		printf("%d\n", arr[index]);
+//	}
+//
+//	system("pause");
+//	return 0;
+//}
+
+//一维数组的应用   数组   指针   保存学生姓名
+
+//#include<stdio.h>
+//#include<Windows.h>
+//#define num1 5
+//
+//int main()
+//{
+//	char*  arr[num1];
+//	int dex;
+//	arr[0] = "R";
+//	arr[1] = "Z";
+//	arr[2] = "Y";
+//	arr[3] = "H";
+//	arr[4] = "D";
+//	for (dex = 0; dex < num1; dex++)
+//	{
+//		printf("%s\n", arr[dex]);
+//	}
+//
+//	system("pause");
+//	return 0;
+//}
 
 
+//四十六  二维数组保存数据   键盘键入，printf max，min,转换格式输出
+            //只需要自定义输入的行数和列数即可，其他无需改动
+//#include<stdio.h>
+//#include<Windows.h>
+//#define row1 4
+//#define col1 2
+//#define row2 col1
+//#define col2 row1
+//int main()
+//{
+//	int a[row1][col1], b[row2][col2];
+//	int max, min;
+//	int h, l, i, j;
+//	for (i = 0; i < row1; i++)
+//	{
+//		for (j = 0; j < col1; j++)
+//		{
+//			printf("a[%d][%d]=", i, j);
+//			scanf_s("%d", &a[i][j]);
+//		}
+//	}
+//	printf("输出二维数组：\n");
+//	for (i = 0; i < row1; i++)
+//	{
+//		for (j = 0; j < col1; j++)
+//		{
+//			printf("%d\t", a[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	/*求数组中的最大元素及其下标*/
+//	max = a[0][0];
+//	h = 0;
+//	l = 0;
+//	for (i = 0; i < row1; i++)
+//	{
+//		for (j = 0; j < col1; j++)
+//		{
+//			if (max < a[i][j])
+//			{
+//				max = a[i][j];
+//				h = i;
+//				l = j;
+//			}
+//		}
+//	}
+//
+//	printf("数组中最大的元素是：\n");
+//	printf("max:a[%d][%d]=%d\n", h, l, max);
+//
+//	/*求数组中的最大元素及其下标*/
+//	min = a[0][0];
+//	h = 0;
+//	l = 0;
+//	for (i = 0; i < row1; i++)
+//	{
+//		for (j = 0; j < col1; j++)
+//		{
+//			if (min > a[i][j])
+//			{
+//				min = a[i][j];
+//				h = i;
+//				l = j;
+//			}
+//		}
+//	}
+//	printf("数组中最小的元素是：\n");
+//	printf("min:a[%d][%d]=%d\n", h, l, min);
+//
+//	/*将数组a转换后存入数组b中*/
+//	for (i = 0; i < row1; i++)
+//	{
+//		for (j = 0; j < col1; j++)
+//		{
+//			b[j][i] = a[i][j];       //a数组和b数组的i,j进行对调
+//		}
+//	}
+//	printf("输出转换后的二维数组\n");
+//	for (i = 0; i < row2; i++)
+//	{
+//		for (j = 0; j < col2; j++)
+//		{
+//			printf("%d\t", b[i][j]);
+//		}
+//		printf("\n");
+//	}
+//
+//	system("pause");
+//	return 0;
+//}
 
-
-
-
-
-
-
+//四十七
+//输入一个3*3的二维数组，printf对角元素之和
+//#include<stdio.h>
+//#include<Windows.h>
+//#include <math.h>
+//int main()
+//{
+//	int count = 0;
+//	int i = 0;
+//	for (i = 100; i <= 200; i++)
+//	{
+//		//判断i是否为素数
+//		//2~i-1的数去试除 i ,是否能整除
+//		//若一直不能整除，j++,直到 i=j跳出来
+//
+//		//2~sqrt(101)之间的数字去试除
+//
+//		//m=a*b
+//		//a和b中一定至少有一个数字是<=开平方m的
+//		// 16 = 2*8 4*4
+//
+//		//sqrt - 是开平方的函数 - 头文件math.h
+//		int j = 0;
+//		int flag = 1;//假设i就是素数
+//
+//		for (j = 2; j <= sqrt(i); j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				flag = 0;//不是素数
+//				break;
+//			}
+//		}
+//		//跳出来在这里
+//		if (flag == 1)
+//		{
+//			count++;
+//			printf("%d ", i);//素数
+//		}
+//	}
+//	printf("\n count:%d\n", count);
+//	system("pause");
+//	return 0;
+//}
 
 
 
