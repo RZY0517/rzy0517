@@ -1,4 +1,4 @@
-//  Ò»¡¢EOFÖµ    ÊäÈëÊ²Ã´£¬Êä³öÊ²Ã´£¬´Ë±àÒëÆ÷Ctrl+DÎŞĞ§    Ctrl+ZÓĞĞ§ 
+//  ä¸€ã€EOFå€¼    è¾“å…¥ä»€ä¹ˆï¼Œè¾“å‡ºä»€ä¹ˆï¼Œæ­¤ç¼–è¯‘å™¨Ctrl+Dæ— æ•ˆ    Ctrl+Zæœ‰æ•ˆ 
 #include<stdio.h>
 #include<Windows.h>
 int main() {
@@ -7,8 +7,7 @@ int main() {
 	{
 		putchar(ch);
 	}
-
-
+	
 	system("pause");
 	return 0;
 }
