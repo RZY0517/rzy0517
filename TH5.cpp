@@ -22,20 +22,15 @@
 
 #include<stdio.h>
 #include<Windows.h>
+#include<test1.h>    //test1头文件中包含了MAX函数和ppp函数
 int main() {
-	int MAX(int x, int y);
+	//int MAX(int x, int y);
 	int a, b, z;
 	printf("Please enter two numbers:\n");
 	scanf_s("%d %d", &a, &b);
 	z = MAX(a, b);
 	printf("MAX=%d\n", z);
-
+	ppp();
 	system("pause");
 	return 0;
-}
-int MAX(int x, int y)
-{
-	int z;
-	z = x > y ? x : y;
-	return z;      //或者直接写成（return （x>y?x:y）);
 }
