@@ -1,3 +1,5 @@
+//依附于Fli.h(Function Library).
+
 //7.2----------------输入两个整数，要求输出其中值较大者。要求用函数来找到大数。
 //#include<stdio.h>
 //#include<Windows.h>
@@ -87,27 +89,96 @@
 //}
 
 
+//#include<stdio.h>//例7.7 用递归方法求n!。若所求>13的阶乘结果，可以修改为float或double类型。
+//#include<Windows.h>
+//#include<Fli.h>
+//int main() {
+//	int t,s;
+//	printf("Input an integer number:\n");
+//	scanf_s("%d", &t);
+//	s = fac(t);
+//	printf("%d!=%d\n", t, s);
+//	system("pause");
+//	return 0;
+//}
+
+//例7.7.1求1到的和，用函数递归方法。
+//#include<stdio.h>
+//#include<Windows.h>
+//#include<Fli.h>
+//int main()
+//{
+//	int n, F;
+//	printf("Please one number:\n");
+//	scanf_s("%d", &n);
+//	F = addn(n);
+//	printf("1-%d之和为：%d\n", n, F);
+//	system("pause");
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//#include<Windows.h>                         //Hanoi塔算法     盘子挪动问题
+//void hanoi(int i, char A, char B, char C);
+//void move(char x, char y);
+//int main(void)
+// {
+//	int n;
+//	printf("请输入n的值：");
+//	scanf_s("%d", &n);
+//	hanoi(n, 'A', 'B', 'C');
+//	system("pause");
+//	return 0;
+// }
+// void hanoi(int i, char A, char B, char C)
+// {
+//	 void move(char x, char y);
+//	 if (i == 1)
+//		 move(A, C);
+//	 else
+//		 {
+//		         hanoi(i - 1, A, C, B);   //函数递归调用
+//		         move(A, C);
+//		         hanoi(i - 1, B, A, C);
+//		 }
+//	 }
+// void move(char x, char y)
+// {
+//	     printf("%c ——> %c \n",x, y);
+// }
+
+
+//指针※※※
+
+//1.通过指针变量访问整型变量
 #include<stdio.h>
 #include<Windows.h>
-#include<test1.h>
-int main() {
-	int t,s;
-	printf("Input an integer number:\n");
-	scanf_s("%d", &t);
-	s = fac(t);
-	printf("%d!=%d\n", t, s);
+int main()
+{
+	int a = 100, b = 200,c=3,d=4,e=5;
+	int *P1 = &a, *P2 = &b,*P3,*P4,*P5=&b;
+	P3 = &c;
+	P4 = &d;
+	*P5 = e;//上面的*P5只是初始化他而已，不影响后面操作。
+	//P1 = &a;
+	//P2 = &b;
+	//printf("%o", P1);//输出指针变量P1的值，因为P1指向了a,就是输出了a的地址，即&a；
+	//*P1!=&a;因为a的地址是赋给指针变量P1,而不是赋给*P1（即变量a）；
+	printf("a=%d,b=%d,c=%d,d=%d\n", a, b,c,d);
+	printf("*P1=%d,*P2=%d\n", *P1, *P2);
+	printf("*P3=%d,*P4=%d\n", *P3, *P4);
+	*P1 = 9;//这时将整数9赋给P1当前所指向的变量（a），因上面P1指向a,所以相当于把9赋值给a，即a=1；
+	printf("*P1=%d,a=%d\n", *P1,a);
+	printf("*P5=%d\n", *P5);
+	
+	//printf("P1=%d,P2=%d\n", P1, P2);//输出P1（a地址）P2（b地址）的地址信息。
+
 	system("pause");
 	return 0;
+
+
 }
-
-
-
-
-
-
-
-
-
 
 
 

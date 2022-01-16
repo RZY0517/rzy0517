@@ -1,4 +1,5 @@
-#pragma once
+#pragma once//依附于TH5.cpp
+#include<stdio.h>
 void ppp()//例7.2
 {
 	printf("this is a test\n");
@@ -61,22 +62,31 @@ int age(int n)       //例7.6
 }
 
 
-#include<stdio.h>
-int fac(int n)                  //例7.7   n!=n*(n-1)!       (n>1时)
+
+int fac(int n)                  //例7.7   n!=(n-1)!*n     (n>1时)
 {
 	int s;
 	if (n < 0)
 		printf("Your enter have error!\n");
 	else if (n == 0 || n == 1)
-	{
 		s = 1;
-	}
 	else
 		s = fac(n - 1)*n;
 	return s;
 }
 
+int addn(int n)//例7.7.1   求1到n的和
+{
+	int f=0;
+	if (n <= 0)
+		printf("Your enter have error!\n");
+	else if (n == 1)
+		f = 1;
+	else
+		f = ((1 + n)*n )/ 2;
 
+	return f;
+}
 
 
 
