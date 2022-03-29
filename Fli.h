@@ -90,3 +90,22 @@ int addn(int n)//例7.7.1   求1到n的和
 
 
 
+void swap(int *a, int *b)
+{                //如果写成*temp会出错，因为*a=2（自定义初始化为2，初始化为什么都可以）
+				 //a是个int类型，而temp未赋值初始化，所以不能写成*temp；具体解释----书P225
+	int temp;    //输入2和4
+	temp = *a;   //此时point1和a都指向2，ponit2和b都指向4；
+	*a = *b;     //进行2和4的对调，而不是2和4地址的对调，所以用*a,而不是直接写a;(*a即代表2，而a代表存放2的地址）
+	*b = temp;   //更何况，还未定义过*a和*b；
+}                //main函数中将实参（point1和point2都是指针变量）传递到swap中，作为形参*a和*b，
+                 //目的是为了交换a和b所指的值，所以直接交换*a和*b即可
+
+void exchange(int *q1, int *q2, int *q3)
+{
+	if (*q1 < *q2)
+		swap(q1, q2);
+	if (*q1 < *q3)
+		swap(q1, q3);
+	if (*q2 < *q3)
+		swap(q2, q3);
+}
